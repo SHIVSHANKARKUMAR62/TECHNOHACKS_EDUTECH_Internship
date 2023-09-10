@@ -12,11 +12,17 @@ class LL{
         System.out.print("Enter name: ");
         name = sc.nextLine();
         list.add(name);
+        System.out.println(name+" is successfully added in your list.");
     }
     public void removeList(){
         System.out.print("Enter name: ");
         name = sc.nextLine();
-        list.remove(name);
+        if(list.contains(name)){
+            list.remove(name);
+            System.out.println(name+" is Successfully removed in your list.");
+        }else{
+            System.out.println(name+" is not found in your list.");
+        }
     }
     public void display(){
         System.out.print("Items are: ");
@@ -49,7 +55,7 @@ class Dishp{
 
             }
 
-            System.out.print("Enter one to take more value for calculation otherwise press other number: ");
+            System.out.print("Enter one to take more Performance otherwise press other number: ");
             s = sc.nextInt();
 
         }while (s==1);
@@ -62,5 +68,6 @@ public class to_do_list {
     public static void main(String[] args) {
         Dishp display = new Dishp();
         display.dis();
+        System.out.print("Thank You...");
     }
 }
